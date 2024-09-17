@@ -1,0 +1,11 @@
+<header>
+    <h1><a href="/">Research Gateway</a></h1>
+</header>
+
+{% for paper in papers %}
+    <article>
+        <time>published: {{ paper.published_date }}</time>
+        <h2><a href="">{{ paper.title }}</a></h2>
+        <p>{{ paper.description|linebreaksbr }}</p>
+    </article>
+{% endfor %}
