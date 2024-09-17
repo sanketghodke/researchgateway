@@ -1,0 +1,14 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <div class="card border-info mb-3">
+        <div class="card-header"><h3>{{ paper.title }}</h3></div>
+        <div class="card-body">
+            {% if paper.published_date %}
+                <h6 class="card-title">Published: {{ paper.published_date }}</h6>
+            {% endif %}
+            <br>
+            <p class="card-text">{{ paper.description|linebreaksbr }}</p>
+        </div>
+    </div>
+{% endblock %}
